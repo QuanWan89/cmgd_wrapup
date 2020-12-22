@@ -1,0 +1,36 @@
+components:
+  schemas:
+    Sample:
+      required:
+        - sample_id
+        - name
+        - num_val
+        - str_val
+        - bln_val
+      properties:
+        sample_id:
+          type: string
+        name:
+          type: string
+        num_val:
+          type: number
+        str_val:
+          type: string
+        bln_val:
+          type: boolean
+    Error:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
