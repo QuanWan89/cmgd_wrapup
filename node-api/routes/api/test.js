@@ -10,8 +10,7 @@ router.get(
                 COLUMN_NAME
                 FROM
                     information_schema.COLUMNS
-                WHERE
-                    TABLE_NAME = 'sample';
+                ;
       `;
     let raw = await db.query(query);
     res.send(raw.rows);
